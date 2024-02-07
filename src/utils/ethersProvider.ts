@@ -3,7 +3,6 @@ import { providers } from "ethers";
 import * as React from "react";
 import { type HttpTransport } from "viem";
 import { usePublicClient, type PublicClient } from "wagmi";
-import { getPublicClient } from "wagmi/actions";
 
 export function publicClientToProvider(publicClient: PublicClient) {
   const { chain, transport } = publicClient;

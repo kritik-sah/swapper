@@ -58,7 +58,9 @@ const SwapForm: React.FC<SwapFormProps> = ({
           type="text"
           placeholder="0.1..."
           disabled={!primary}
-          value={swapValue || amount}
+          value={
+            swapValue ? swapValue / 10 ** balance?.data?.decimals! : amount
+          }
           onChange={handleFormInputChange}
         />
       </label>
